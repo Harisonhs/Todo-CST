@@ -10,6 +10,9 @@ public class MyTasks
     public string? Description { get; set; }
 
     public override string ToString(){
-        return $"Title: {Title}. Description: {Description?.Substring(0, Description.Length > 15? 15:Description.Length)}... IsImportant: {IsImportant}";
+        int len = string.IsNullOrEmpty(Description)? 0: Description.Length;
+        return $"Title: {Title}. " + 
+        $"Description: {Description?.Substring(0, len > 15? 15 : len)}... " + 
+        $"IsImportant: {IsImportant}";
     }
 }

@@ -65,7 +65,7 @@ export class AddTask extends Component {
 
     render() {
         let contents = this.state.loading
-            ? <p><em>Loading...</em></p>
+            ? <p><em>Carregando...</em></p>
             : this.renderFormMyTask(this.state.tasks);
 
         return (
